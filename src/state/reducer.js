@@ -24,9 +24,11 @@ export const reducer  = (state = initialstate, action) => {
             console.log("fired")
             return {
                 ...state,
+                    additionalPrice: state.additionalPrice + action.payload.price ,
                 car : {...state.car,
                         features :[ ...state.car.features, action.payload]
-                    }
+                    },
+                additionalFeatures : state.additionalFeatures.filter(item => item.id != action.payload.id)
             };
         default:
             return state
