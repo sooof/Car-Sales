@@ -4,9 +4,6 @@ import {addedFeature} from '../state/actions'
 
 const AdditionalFeature = props => {
   console.log("AdditionalFeature props = ", props )
-  const handleClick = () => {
-
-  }
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
